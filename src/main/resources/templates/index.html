@@ -3,22 +3,108 @@
 <head> 
     <title>Vaquinha</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
     <link rel="stylesheet" th:href="@{/css/app.css}">
-    <!--<link rel="stylesheet" href="../static/css/app.css">-->
+    <link rel="stylesheet" href="../static/css/app.css">
 </head>
 <body>
-    <div class="banner">
-        <div class="content">
-            <h1 style="text-align: center;">Hello World!</h1>
-            <p style="text-align: center;" th:text="${balance}"></p>
-            <div style="text-align: center;">
-                <form action="https://www.paypal.com/donate" method="post" target="_top">
-                    <input type="hidden" name="hosted_button_id" value="ZS64A73PVJMP6" />
-                    <input type="image" src="https://www.paypalobjects.com/pt_PT/PT/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                    <img alt="" border="0" src="https://www.paypal.com/pt_PT/i/scr/pixel.gif" width="1" height="1" />
-                </form>
+    <div class="content">
+        <div class="header row">
+            <h1 style="text-align: center;">Vaquinha Do Pelotão</h1>
+            <p style="text-align: center;">Esta é a vaquinha que os membros do pelotão podem
+                 usar quando precisarem de financiamento
+                para o seu futuro
+            </p>
+        </div>
+        <div class="row balance">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-8 card container-balance">
+                    <h3 class="balance-header">De momento o 💰 tem:</h3>
+                    <p class="balance-text"><span>10</span>€</p>
+                    <iframe style="margin-bottom: 3vh;" src="https://giphy.com/embed/3o6Mb9oeV59vc1XeEw" width="400" height="282" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center;" th:text="${balance}"></p>
+
+        <div class="row justify-content-around donate">
+            <h2 class="donate-header">Como doar e outras informações</h2>
+            <div class="col-lg-5 col-sm-12 col-md-12 card container-donate">
+                <h4>Transações</h4>
+                <p class="donate-description">Transações efetuadas desde agosto de 2021</p>
+                <table class="table table-dark table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Bruto</th>
+                        <th scope="col">Comissão</th>
+                        <th scope="col">Líquido</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-md-12 card container-donate">
+                <h4>Doar usando MB</h4>
+                <p class="donate-description">
+                    Doar por MB é preferível pois não tem comissão associada.<br />
+                    No entanto, tem a desvantagem de permitir apenas transações com valor superior ou igual a 10€.
+                </p>
+                <div class="row justify-content-center donate-mb">
+                    <div class="col-4">
+                        <div class="row">
+                            <p>Entidade: <br />21800</p>
+                        </div>
+                        <div class="row">
+                            <p>Referência: <br />921 160 863</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <img class="donate-mb-logo" th:src="@{/images/mb-logo.png}" alt="mb-logo">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-md-12 card container-donate">
+                <h4>Doar com Paypal</h4>
+                <p class="donate-description">
+                    Doar com paypal deve ser evitado pois ele cobra uma comissão grande pela transação.<br />
+                    Este método é bom na medida em que se pode transacionar valores inferiores a 10€.<br />
+                    Para entender melhor a comissão, numa transação de 1€, o paypal irá ficar com 0.38€.
+                </p>
+                <div class="row">
+                    <div class="col-6">
+                        <p class="fw-bold paypal-header">Doar com QR Code</p>
+                        <img src="../static/images/Código_QR.png" alt="qr code">
+                    </div>
+                    <div class="col-6">
+                        <p class="fw-bold paypal-header">Doar clicando num botãozinho</p>
+                        <form action="https://www.paypal.com/donate" method="post" target="_top">
+                            <input type="hidden" name="hosted_button_id" value="ZS64A73PVJMP6" />
+                            <input type="image" src="https://www.paypalobjects.com/pt_PT/PT/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                            <img alt="" border="0" src="https://www.paypal.com/pt_PT/i/scr/pixel.gif" width="1" height="1" />
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>

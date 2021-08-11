@@ -42,6 +42,7 @@ public class FrontController {
             System.out.println(tran.getTimestamp());
             System.out.println(tran.getFeeAmount().getValue());
             System.out.println(tran.getGrossAmount().getValue());
+            System.out.println(tran.getNetAmount().getValue());
             System.out.println(tran.getType());
         }
 
