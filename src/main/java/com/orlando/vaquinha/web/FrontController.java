@@ -19,7 +19,8 @@ public class FrontController {
     
     @GetMapping(value = {"", "/", "/index"})
     public String index(Model model) {
-        model.addAttribute("balance", 220);
+        model.addAttribute("balance", paypalApiRequest.getBalance());
+        model.addAttribute("transactions", paypalApiRequest.getTransactions().getPaymentTransactions());
         return "index";
     }
 
