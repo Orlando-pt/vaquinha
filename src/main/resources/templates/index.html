@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <link rel="stylesheet" th:href="@{/css/app.css}">
-    <link rel="stylesheet" href="../static/css/app.css">
+    <!-- <link rel="stylesheet" href="../static/css/app.css"> -->
 </head>
 <body>
     <div class="content">
@@ -101,6 +101,13 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <form action="#" th:action="@{/contribution}" th:object="${payment}" method="post">
+                <p>Nome: <input type="text" th:field="*{name}" /></p>
+                <p>Valor: <input type="number" th:field="*{amount}" /></p>
+                <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+            </form>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
