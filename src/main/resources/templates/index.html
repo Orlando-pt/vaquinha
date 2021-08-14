@@ -108,6 +108,24 @@
                 <p>Valor: <input type="number" th:field="*{amount}" /></p>
                 <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
             </form>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Valor</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr th:each="contribution,iterStat : ${contributions}">
+                    <th scope="row" th:text="${iterStat.index}">..</th>
+                    <td th:text="${contribution.name}">..</td>
+                    <td th:text="${contribution.timestamp}">..</td>
+                    <td th:text="${contribution.amount}">..</td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
