@@ -16,6 +16,13 @@
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>Orlando-pt</name>
+			<url>https://maven.pkg.github.com/Orlando-pt/vaquinha</url>
+		</repository>
+	</distributionManagement>
 	<dependencies>
 
 		<!-- Added libraries-->
