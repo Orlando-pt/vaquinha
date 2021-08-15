@@ -53,17 +53,17 @@ public class FrontController {
 
     private Boolean verifyPaymentParams(Model model, PaymentDto payment) {
         if (payment.getAmount() == null || payment.getName() == null) {
-            model.addAttribute("error-message", "Por favor verifique os campos de submissão. Não são aceites campos vazios.");            
+            model.addAttribute("error_message", "Por favor verifique os campos de submissão. Não são aceites campos vazios.");            
             System.out.println("Null values");
             return true;
         }
         if (payment.getName().isEmpty()) {
-            model.addAttribute("error-message", "Por favor verifique o nome da submissão.");
+            model.addAttribute("error_message", "Por favor verifique o nome da submissão.");
             System.out.println("Empty name");
             return true;
         }
         if (Double.compare(payment.getAmount(), Double.valueOf(0.0)) <= 0) {
-            model.addAttribute("error-message", "O valor da contribuição deve ser superior a 0. Por favor verique novamente o campo.");
+            model.addAttribute("error_message", "O valor da contribuição deve ser superior a 0. Por favor verique novamente o campo.");
             System.out.println("Bad amount value");
             return true;
         }
