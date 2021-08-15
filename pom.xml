@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.orlando</groupId>
 	<artifactId>vaquinha</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>vaquinha</name>
 	<description>A application made to help a friend with his university payments.</description>
 	<properties>
