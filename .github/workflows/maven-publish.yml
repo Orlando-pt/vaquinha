@@ -6,6 +6,8 @@ name: Publish Maven Package on release
 on:
   release:
     types: [created]
+  push:
+    branches: [ main ]
 
 jobs:
   build:
