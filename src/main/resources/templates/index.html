@@ -1,133 +1,539 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
-<head> 
-    <title>Vaquinha</title> 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html style="font-size: 16px;">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords"
+    content="Web Design Services, ​Hosting solution with benefits., ​What do our users say?, ​Hosting for every website, Meet Our Best Team, Premium Plans, $0, $29, $59, $139, Nam ultrices ultrices nec tortor pulvinar esteras loremips est orem., Follow us, Contact us">
+  <meta name="description" content="">
+  <meta name="page_type" content="np-template-header-footer-from-plugin">
+  <title>Vaquinha</title>
+  <link rel="stylesheet" th:href="@{/css/nicepage.css}" media="screen">
+  <link rel="stylesheet" th:href="@{/css/index.css}" media="screen">
+  <script class="u-script" type="text/javascript" th:src="@{/js/jquery-1.9.1.min.js}" defer=""></script>
+  <script class="u-script" type="text/javascript" th:src="@{/js/nicepage.js}" defer=""></script>
+  <meta name="generator" content="Nicepage 3.23.2, nicepage.com">
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+  <link id="u-page-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
 
-    <link rel="stylesheet" th:href="@{/css/app.css}">
-    <!-- <link rel="stylesheet" href="../static/css/app.css"> -->
+
+
+
+
+
+  <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "../static/images/logo.jpg"
+}</script>
+  <meta name="theme-color" content="#4b7de1">
+  <meta property="og:title" content="index">
+  <meta property="og:type" content="website">
 </head>
-<body>
-    <div class="content">
-        <div class="header row">
-            <h1 style="text-align: center;">Vaquinha Do Pelotão</h1>
-            <p style="text-align: center;">Esta é a vaquinha que os membros do pelotão podem
-                 usar quando precisarem de financiamento
-                para o seu futuro
-            </p>
+
+<body class="u-body">
+  <header class="u-clearfix u-header u-sticky u-sticky-a8fb u-white u-header" id="sec-fce5">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <a href="#" class="u-align-left u-image u-image-default u-logo u-image-1" data-image-width="300"
+        data-image-height="300">
+        <img th:src="@{/images/logo.jpg}" class="u-logo-image u-logo-image-1">
+      </a>
+      <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="XL">
+        <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700;" wfd-invisible="true">
+          <a class="u-button-style u-custom-border u-custom-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+            href="#">
+            <svg>
+              <use xlink:href="#menu-hamburger"></use>
+            </svg>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;">
+                  <rect y="1" width="16" height="2"></rect>
+                  <rect y="7" width="16" height="2"></rect>
+                  <rect y="13" width="16" height="2"></rect>
+                </symbol>
+              </defs>
+            </svg>
+          </a>
         </div>
-        <div class="row balance">
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6 col-sm-8 card container-balance">
-                    <h3 class="balance-header">De momento o 💰 tem:</h3>
-                    <p class="balance-text"><span th:text="${balance.balance.value}">20000</span>€</p>
-                    <iframe style="margin-bottom: 3vh;" src="https://giphy.com/embed/3o6Mb9oeV59vc1XeEw" width="400" height="282" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-                </div>
-            </div>
+        <div class="u-custom-menu u-nav-container" wfd-invisible="true">
+          <ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base"
+                href="#" style="padding: 10px;">Home</a>
+            </li>
+            <li class="u-nav-item"><a
+              class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base"
+              href="#sec-3761" style="padding: 10px;">Bag</a>
+            </li>
+            <li class="u-nav-item"><a
+              class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base"
+              href="#carousel_9938" style="padding: 10px;">Contribuir</a>
+            </li>
+            <li class="u-nav-item"><a
+              class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base"
+              href="#sec-41fd" style="padding: 10px;">Registar</a>
+            </li>
+            <li class="u-nav-item"><a
+              class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base"
+              href="#sec-c3f0" style="padding: 10px;">Histórico</a>
+            </li>
+          </ul>
         </div>
-        <div class="row justify-content-around donate">
-            <h2 class="donate-header">Como doar e outras informações</h2>
-            <div class="col-lg-5 col-sm-12 col-md-12 card container-donate">
-                <h4>Transações</h4>
-                <p class="donate-description">Transações efetuadas desde agosto de 2021</p>
-                <table class="table table-dark table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Data</th>
-                        <th scope="col">Bruto</th>
-                        <th scope="col">Comissão</th>
-                        <th scope="col">Líquido</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr th:each="transaction,iterStat : ${transactions}">
-                        <th scope="row" th:text="${iterStat.index}">..</th>
-                        <td th:text="${transaction.getPayerDisplayName()}">..</td>
-                        <td th:text="${transaction.getPayer()}">..</td>
-                        <td th:text="${transaction.getTimestamp().substring(0, 10)}">..</td>
-                        <td th:text="${transaction.getGrossAmount().getValue()}">..</td>
-                        <td th:text="${transaction.getFeeAmount().getValue()}">..</td>
-                        <td th:text="${transaction.getNetAmount().getValue()}">..</td>
-                      </tr>
-                    </tbody>
-                  </table>
+        <div class="u-custom-menu u-nav-container-collapse" wfd-invisible="true">
+          <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+            <div class="u-sidenav-overflow">
+              <div class="u-menu-close"></div>
+              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#"
+                    style="padding: 10px;">Home</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#sec-3761"
+                  style="padding: 10px;">Bag</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#carousel_9938"
+                  style="padding: 10px;">Contribuir</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#sec-41fd"
+                  style="padding: 10px;">Registar</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#sec-c3f0"
+                  style="padding: 10px;">Histórico</a>
+                </li>
+              </ul>
             </div>
-            <div class="col-lg-3 col-sm-12 col-md-12 card container-donate">
-                <h4>Doar usando MB</h4>
-                <p class="donate-description">
-                    Doar por MB é preferível pois não tem comissão associada.<br />
-                    No entanto, tem a desvantagem de permitir apenas transações com valor superior ou igual a 10€.
-                </p>
-                <div class="row justify-content-center donate-mb">
-                    <div class="col-4">
-                        <div class="row">
-                            <p>Entidade: <br />21800</p>
-                        </div>
-                        <div class="row">
-                            <p>Referência: <br />921 160 863</p>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <img class="donate-mb-logo" th:src="@{/images/mb-logo.png}" alt="mb-logo">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-12 col-md-12 card container-donate">
-                <h4>Doar com Paypal</h4>
-                <p class="donate-description">
-                    Doar com paypal deve ser evitado pois ele cobra uma comissão grande pela transação.<br />
-                    Este método é bom na medida em que se pode transacionar valores inferiores a 10€.<br />
-                    Para entender melhor a comissão, numa transação de 1€, o paypal irá ficar com 0.38€.
-                </p>
-                <div class="row">
-                    <div class="col-6">
-                        <p class="fw-bold paypal-header">Doar com QR Code</p>
-                        <img th:src="@{/images/Código_QR.png}" alt="qr code">
-                    </div>
-                    <div class="col-6">
-                        <p class="fw-bold paypal-header">Doar clicando num botãozinho</p>
-                        <form action="https://www.paypal.com/donate" method="post" target="_top">
-                            <input type="hidden" name="hosted_button_id" value="ZS64A73PVJMP6" />
-                            <input type="image" src="https://www.paypalobjects.com/pt_PT/PT/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                            <img alt="" border="0" src="https://www.paypal.com/pt_PT/i/scr/pixel.gif" width="1" height="1" />
-                        </form>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <div class="u-black u-menu-overlay u-opacity u-opacity-70" wfd-invisible="true"></div>
         </div>
-        <div class="row">
-            <form action="#" th:action="@{/contribution}" th:object="${payment}" method="post">
-                <p>Nome: <input type="text" th:field="*{name}" /></p>
-                <p>Valor: <input type="number" th:field="*{amount}" /></p>
-                <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-            </form>
-            <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Data</th>
-                    <th scope="col">Valor</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr th:each="contribution,iterStat : ${contributions}">
-                    <th scope="row" th:text="${iterStat.index}">..</th>
-                    <td th:text="${contribution.name}">..</td>
-                    <td th:text="${contribution.timestamp}">..</td>
-                    <td th:text="${contribution.amount}">..</td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>
+      </nav>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  </header>
+  <section class="u-align-center-xs u-clearfix u-image u-section-1" id="carousel_5937" data-image-width="608"
+    data-image-height="1080">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <div
+        class="u-align-center u-container-style u-group u-opacity u-opacity-80 u-radius-20 u-shape-round u-white u-group-1">
+        <div class="u-container-layout u-valign-middle u-container-layout-1">
+          <h1 class="u-text u-text-palette-2-base u-text-1">Vaquinha Do Pelotão</h1>
+          <p class="u-text u-text-2">Feito com amor pelo pelotão mais bravo do quartel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="u-align-center u-clearfix u-gradient u-section-2" id="sec-3761">
+    <div
+      class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
+      <div class="u-align-center u-container-style u-group u-group-1">
+        <div
+          class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-container-layout-1">
+          <h1 class="u-text u-text-1"> Montante Arrecadado</h1>
+          <p class="u-text u-text-2">Bla Bla Bla give me more money</p>
+        </div>
+      </div>
+      <h2
+        class="u-text u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-palette-2-base u-text-3">
+        <span th:text="${balance.balance.value}"></span>€</h2>
+    </div>
+  </section>
+  <section class="u-align-center u-clearfix u-gradient u-section-3" id="carousel_9938">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <div
+        class="u-align-left u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-shape-rectangle u-group-1">
+        <div class="u-container-layout u-container-layout-1">
+          <h1 class="u-text u-text-palette-2-base u-text-1"> Contribuir é muito simples.</h1>
+          <p class="u-text u-text-2"> Podes contribuir com um destes 4 métodos, cada um deles tem as suas vantagens e
+            desvantagens, mas o que realmente interessa é que no final os meus bolsos estejam mais cheios que no início.
+            Por favor, lê também a secção seguinte.</p>
+        </div>
+      </div>
+      <div
+        class="u-clearfix u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-gutter-18 u-layout-wrap u-layout-wrap-1">
+        <div class="u-gutter-0 u-layout">
+          <div class="u-layout-row">
+            <div class="u-size-30">
+              <div class="u-layout-col">
+                <div
+                  class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-container-style u-layout-cell u-radius-10 u-size-40 u-white u-layout-cell-1">
+                  <div class="u-container-layout u-valign-top u-container-layout-2"><span
+                      class="u-file-icon u-icon u-icon-circle u-palette-2-light-3 u-spacing-18 u-icon-1"><img
+                        th:src="@{/images/mb_150.png}" alt=""></span>
+                    <h3 class="u-align-center-xs u-text u-text-default u-text-palette-1-base u-text-3">Transferência
+                      Multibanco</h3>
+                    <div class="u-align-center u-container-style u-group u-shape-rectangle u-group-2">
+                      <div class="u-container-layout u-container-layout-3">
+                        <div class="u-align-center-xs u-container-style u-group u-group-3">
+                          <div class="u-container-layout"><span class="u-icon u-icon-circle u-icon-2"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 50 50" style="">
+                                <use xlink:href="#svg-634d"></use>
+                              </svg><svg class="u-svg-content" viewBox="0 0 50 50" x="0px" y="0px" id="svg-634d"
+                                style="enable-background:new 0 0 50 50;">
+                                <circle style="fill:#25AE88;" cx="25" cy="25" r="25"></circle>
+                                <polyline
+                                  style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                  points="
+	38,15 22,33 12,25 "></polyline>
+                              </svg></span>
+                            <p class="u-align-center-xs u-text u-text-default u-text-palette-5-dark-2 u-text-4">Não se
+                              paga comissão</p>
+                          </div>
+                        </div>
+                        <div class="u-align-center-xs u-container-style u-group u-group-4">
+                          <div class="u-container-layout"><span class="u-icon u-icon-circle u-icon-3"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 50 50" style="">
+                                <use xlink:href="#svg-e2bd"></use>
+                              </svg><svg class="u-svg-content" viewBox="0 0 50 50" x="0px" y="0px" id="svg-e2bd"
+                                style="enable-background:new 0 0 50 50;">
+                                <circle style="fill:#D75A4A;" cx="25" cy="25" r="25"></circle>
+                                <polyline
+                                  style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;"
+                                  points="16,34 25,25 34,16 
+	"></polyline>
+                                <polyline
+                                  style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;"
+                                  points="16,16 25,25 34,34 
+	"></polyline>
+                              </svg></span>
+                            <p class="u-align-center-xs u-text u-text-default u-text-palette-5-dark-2 u-text-5">Montante
+                              mínimo de 10€</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="u-align-left u-text u-text-palette-2-light-1 u-text-6">
+                      <li>Entidade&nbsp; &nbsp; : 21 800</li>
+                      <li>Referência : 921 160 863 </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-container-style u-layout-cell u-radius-10 u-size-20 u-white u-layout-cell-2">
+                  <div
+                    class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-6">
+                    <span class="u-icon u-icon-circle u-palette-1-light-3 u-spacing-18 u-icon-4"><svg class="u-svg-link"
+                        preserveAspectRatio="xMidYMin slice" viewBox="0 0 469.351 469.351" style="">
+                        <use xlink:href="#svg-d198"></use>
+                      </svg><svg class="u-svg-content" viewBox="0 0 469.351 469.351" x="0px" y="0px" id="svg-d198"
+                        style="enable-background:new 0 0 469.351 469.351;">
+                        <path style="fill:#03A9F4;"
+                          d="M356.626,85.086c-10.332-9.837-25.314-13.036-38.763-8.277c-3.803,1.271-6.573,4.568-7.168,8.533  l-2.987,20.523c-4.529,30.998-31.052,54.019-62.379,54.144h-42.667c-4.896,0.001-9.162,3.335-10.347,8.085l-32,128  c-1.426,5.716,2.052,11.505,7.768,12.931c0.843,0.21,1.709,0.317,2.578,0.317h53.333c4.896-0.001,9.162-3.335,10.347-8.085  l19.307-77.248h41.6c31.934,0.106,59.792-21.66,67.413-52.672l7.872-31.552C376.075,120.377,370.763,99.49,356.626,85.086z">
+                        </path>
+                        <g>
+                          <path style="fill:#283593;"
+                            d="M10.664,437.342C4.773,437.341-0.002,432.564,0,426.673c0-0.869,0.107-1.735,0.317-2.578   l10.667-42.453v-0.448l10.667-42.432c1.185-4.75,5.451-8.084,10.347-8.085h27.136c14.728-0.003,26.669,11.933,26.673,26.661   c0,2.181-0.267,4.354-0.795,6.47l-2.667,10.667c-2.967,11.875-13.637,20.205-25.877,20.203H29.672l-8.64,34.581   C19.845,434.015,15.567,437.351,10.664,437.342z M35.005,373.342h21.461c2.447-0.007,4.575-1.678,5.163-4.053l2.667-10.667   c0.731-2.841-0.981-5.737-3.822-6.467c-0.438-0.113-0.888-0.169-1.341-0.167H40.338L35.005,373.342z">
+                          </path>
+                          <path style="fill:#283593;"
+                            d="M124.733,437.342h-15.189c-16.33,0.004-29.571-13.231-29.575-29.561   c-0.001-2.419,0.296-4.829,0.882-7.175l0,0l1.408-5.675c3.157-12.736,14.612-21.662,27.733-21.611h15.189   c16.33,0.028,29.545,13.289,29.517,29.619c-0.004,2.407-0.302,4.804-0.887,7.138l-1.408,5.675   C149.243,428.457,137.824,437.366,124.733,437.342z M101.565,405.79c-1.096,4.414,1.594,8.88,6.008,9.976   c0.645,0.16,1.306,0.241,1.971,0.243h15.189c3.289,0.009,6.159-2.227,6.955-5.419l1.408-5.675c1.096-4.414-1.594-8.88-6.008-9.976   c-0.645-0.16-1.306-0.241-1.971-0.243h-15.189c-3.289-0.009-6.159,2.227-6.955,5.419L101.565,405.79z">
+                          </path>
+                          <path style="fill:#283593;"
+                            d="M138.664,437.342c-5.891-0.002-10.665-4.779-10.664-10.67c0-0.869,0.107-1.735,0.317-2.578   l10.667-42.667c1.426-5.72,7.218-9.202,12.939-7.776c5.72,1.426,9.202,7.218,7.776,12.939l-10.667,42.667   C147.845,434.015,143.567,437.351,138.664,437.342z">
+                          </path>
+                        </g>
+                        <g>
+                          <path style="fill:#03A9F4;"
+                            d="M266.664,437.342c-5.891-0.002-10.665-4.779-10.664-10.67c0-0.869,0.107-1.735,0.317-2.578   l10.667-42.453v-0.448l10.667-42.432c1.185-4.75,5.451-8.084,10.347-8.085h27.136c14.728-0.003,26.669,11.933,26.673,26.661   c0,2.181-0.267,4.354-0.795,6.47l-2.667,10.667c-2.967,11.875-13.637,20.205-25.877,20.203h-26.795l-8.64,34.581   C275.845,434.015,271.567,437.351,266.664,437.342z M291.005,373.342h21.483c2.447-0.007,4.575-1.678,5.163-4.053l2.667-10.667   c0.73-2.841-0.981-5.737-3.822-6.467c-0.438-0.113-0.889-0.169-1.341-0.167h-18.816L291.005,373.342z">
+                          </path>
+                          <path style="fill:#03A9F4;"
+                            d="M380.733,437.342h-15.189c-16.33,0.004-29.571-13.231-29.575-29.561   c-0.001-2.419,0.296-4.829,0.882-7.175l0,0l1.408-5.675c3.157-12.736,14.612-21.662,27.733-21.611h15.189   c16.33-0.004,29.571,13.231,29.575,29.561c0.001,2.419-0.296,4.829-0.882,7.175l-1.408,5.675   C405.309,428.467,393.854,437.393,380.733,437.342z M357.565,405.79c-1.096,4.414,1.594,8.88,6.008,9.976   c0.645,0.16,1.306,0.241,1.971,0.243h15.189c3.289,0.009,6.159-2.227,6.955-5.419l1.408-5.675c1.096-4.414-1.594-8.88-6.008-9.976   c-0.645-0.16-1.306-0.241-1.971-0.243h-15.189c-3.289-0.009-6.159,2.227-6.955,5.419L357.565,405.79z">
+                          </path>
+                          <path style="fill:#03A9F4;"
+                            d="M394.664,437.342c-5.891-0.002-10.665-4.779-10.664-10.67c0-0.869,0.107-1.735,0.317-2.578   l10.667-42.667c1.426-5.72,7.218-9.202,12.939-7.776c5.72,1.426,9.202,7.218,7.776,12.939l0,0l-10.667,42.667   C403.845,434.015,399.567,437.351,394.664,437.342z">
+                          </path>
+                        </g>
+                        <g>
+                          <path style="fill:#283593;"
+                            d="M202.664,426.676c-3.568-0.002-6.898-1.787-8.875-4.757l-21.333-32   c-3.27-4.901-1.947-11.525,2.955-14.795s11.525-1.947,14.795,2.955l21.333,32c3.275,4.897,1.961,11.521-2.935,14.797   C206.846,426.051,204.778,426.677,202.664,426.676z">
+                          </path>
+                          <path style="fill:#283593;"
+                            d="M181.33,458.676c-5.891-0.002-10.665-4.78-10.663-10.671c0.001-2.493,0.875-4.907,2.471-6.823   l53.333-64c3.776-4.524,10.505-5.131,15.029-1.355c4.524,3.776,5.131,10.505,1.355,15.029l0,0l-53.333,64   C187.493,457.281,184.492,458.68,181.33,458.676z">
+                          </path>
+                        </g>
+                        <path style="fill:#03A9F4;"
+                          d="M437.33,437.342c-5.891-0.002-10.665-4.779-10.664-10.67c0-0.869,0.107-1.735,0.317-2.578  l21.333-85.333c1.426-5.72,7.218-9.202,12.939-7.776c5.72,1.426,9.202,7.218,7.776,12.939l0,0l-21.333,85.333  C446.512,434.015,442.234,437.351,437.33,437.342z">
+                        </path>
+                        <path style="fill:#283593;"
+                          d="M321.405,29.129c-10.249-11.739-25.077-18.468-40.661-18.453H159.997  c-5.159,0-9.578,3.692-10.496,8.768L106.834,254.11c-1.049,5.797,2.801,11.346,8.598,12.395c0.626,0.113,1.262,0.17,1.898,0.17h64  c4.896-0.001,9.162-3.335,10.347-8.085l19.328-77.248h34.325c41.958-0.165,77.478-31.012,83.52-72.533l5.333-36.459l0,0  C336.382,56.773,331.721,41.007,321.405,29.129z">
+                        </path>
+                      </svg></span>
+                    <h3 class="u-text u-text-default u-text-palette-1-base u-text-7">Botão Doar<br>(Interface Paypal)
+                    </h3>
+                    <div class="u-align-center u-container-style u-group u-shape-rectangle u-group-5">
+                      <div class="u-container-layout u-container-layout-7">
+                        <div class="u-container-style u-group u-group-6">
+                          <div class="u-container-layout"><span class="u-icon u-icon-circle u-icon-5"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 50 50" style="">
+                                <use xlink:href="#svg-1cc4"></use>
+                              </svg><svg class="u-svg-content" viewBox="0 0 50 50" x="0px" y="0px" id="svg-1cc4"
+                                style="enable-background:new 0 0 50 50;">
+                                <circle style="fill:#25AE88;" cx="25" cy="25" r="25"></circle>
+                                <polyline
+                                  style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                  points="
+	38,15 22,33 12,25 "></polyline>
+                              </svg></span>
+                            <p class="u-align-center-xs u-text u-text-palette-5-dark-2 u-text-8">O montante pode ser
+                              inferior a 10​€</p>
+                          </div>
+                        </div>
+                        <div class="u-align-center-xs u-container-style u-group u-group-7">
+                          <div class="u-container-layout"><span class="u-icon u-icon-circle u-icon-6"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 50 50" style="">
+                                <use xlink:href="#svg-ce39"></use>
+                              </svg><svg class="u-svg-content" viewBox="0 0 50 50" x="0px" y="0px" id="svg-ce39"
+                                style="enable-background:new 0 0 50 50;">
+                                <circle style="fill:#D75A4A;" cx="25" cy="25" r="25"></circle>
+                                <polyline
+                                  style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;"
+                                  points="16,34 25,25 34,16 
+	"></polyline>
+                                <polyline
+                                  style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;"
+                                  points="16,16 25,25 34,34 
+	"></polyline>
+                              </svg></span>
+                            <p class="u-align-center-xs u-text u-text-palette-5-dark-2 u-text-9">Tem um​a comissão
+                              associada</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <form action="https://www.paypal.com/donate" method="post" target="_top">
+                      <input type="hidden" name="hosted_button_id" value="ZS64A73PVJMP6" />
+                      <input type="image" src="https://www.paypalobjects.com/pt_PT/PT/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                      <img alt="" border="0" src="https://www.paypal.com/pt_PT/i/scr/pixel.gif" width="1" height="1" />
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-size-30">
+              <div class="u-layout-col">
+                <div
+                  class="u-align-center u-container-style u-layout-cell u-radius-10 u-size-20 u-white u-layout-cell-3">
+                  <div
+                    class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-10">
+                    <span class="u-icon u-icon-circle u-palette-1-light-3 u-spacing-18 u-icon-7"><svg class="u-svg-link"
+                        preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style="">
+                        <use xlink:href="#svg-b90f"></use>
+                      </svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-b90f">
+                        <g>
+                          <g>
+                            <g>
+                              <g>
+                                <g>
+                                  <g>
+                                    <g>
+                                      <path
+                                        d="m324.765 512h-234.882c-22.758 0-41.207-18.449-41.207-41.207v-429.586c0-22.758 18.449-41.207 41.207-41.207h234.881c22.758 0 41.207 18.449 41.207 41.207v429.586c.001 22.758-18.448 41.207-41.206 41.207z"
+                                        fill="#3d6d93"></path>
+                                      <path
+                                        d="m324.765 0h-30.905c22.758 0 41.207 18.449 41.207 41.207v429.586c0 22.758-18.449 41.207-41.207 41.207h30.905c22.758 0 41.207-18.449 41.207-41.207v-429.586c0-22.758-18.449-41.207-41.207-41.207z"
+                                        fill="#335e80"></path>
+                                      <path
+                                        d="m282.994 39.147c0 7.692-6.235 13.927-13.927 13.927h-123.486c-7.692 0-13.927-6.235-13.927-13.927 0-4.552-3.69-8.241-8.241-8.241h-28.379c-8.534 0-15.453 6.918-15.453 15.453v419.284c0 8.534 6.918 15.453 15.453 15.453h224.579c8.534 0 15.453-6.918 15.453-15.453v-419.285c0-8.534-6.918-15.453-15.453-15.453h-28.379c-4.55 0-8.24 3.69-8.24 8.242z"
+                                        fill="#f9f7f8"></path>
+                                    </g>
+                                    <circle cx="207.324" cy="26.537" fill="#335e80" r="7.726"></circle>
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                          <g>
+                            <g>
+                              <g>
+                                <path
+                                  d="m125.94 153.637c-4.267 0-7.726-3.459-7.726-7.726v-25.894c0-8.236 6.701-14.938 14.938-14.938h25.894c4.267 0 7.726 3.459 7.726 7.726 0 4.268-3.459 7.726-7.726 7.726h-25.379v25.379c-.001 4.268-3.46 7.727-7.727 7.727z"
+                                  fill="#8fd8fa"></path>
+                              </g>
+                              <g>
+                                <path
+                                  d="m288.708 153.637c-4.267 0-7.726-3.459-7.726-7.726v-25.379h-25.379c-4.267 0-7.726-3.459-7.726-7.726 0-4.268 3.459-7.726 7.726-7.726h25.894c8.236 0 14.938 6.701 14.938 14.938v25.894c0 4.266-3.46 7.725-7.727 7.725z"
+                                  fill="#8fd8fa"></path>
+                              </g>
+                            </g>
+                            <g>
+                              <g>
+                                <path
+                                  d="m159.045 283.3h-25.894c-8.236 0-14.938-6.701-14.938-14.938v-25.894c0-4.268 3.459-7.726 7.726-7.726s7.726 3.459 7.726 7.726v25.379h25.379c4.267 0 7.726 3.459 7.726 7.726.001 4.268-3.458 7.727-7.725 7.727z"
+                                  fill="#8fd8fa"></path>
+                              </g>
+                              <g>
+                                <path
+                                  d="m281.497 283.3h-25.894c-4.267 0-7.726-3.459-7.726-7.726 0-4.268 3.459-7.726 7.726-7.726h25.379v-25.379c0-4.268 3.459-7.726 7.726-7.726s7.726 3.459 7.726 7.726v25.894c.001 8.236-6.701 14.937-14.937 14.937z"
+                                  fill="#8fd8fa"></path>
+                              </g>
+                            </g>
+                            <path
+                              d="m160.966 176.816h24.864c2.276 0 4.121-1.845 4.121-4.121v-24.864c0-2.276-1.845-4.121-4.121-4.121h-24.864c-2.276 0-4.121 1.845-4.121 4.121v24.864c0 2.276 1.845 4.121 4.121 4.121z"
+                              fill="#8fd8fa"></path>
+                            <path
+                              d="m228.818 176.816h24.864c2.276 0 4.121-1.845 4.121-4.121v-24.864c0-2.276-1.845-4.121-4.121-4.121h-24.864c-2.276 0-4.121 1.845-4.121 4.121v24.864c0 2.276 1.845 4.121 4.121 4.121z"
+                              fill="#8fd8fa"></path>
+                            <path
+                              d="m253.682 143.71h-15.453c2.276 0 4.121 1.845 4.121 4.121v24.864c0 2.276-1.845 4.121-4.121 4.121h15.453c2.276 0 4.121-1.845 4.121-4.121v-24.864c0-2.276-1.845-4.121-4.121-4.121z"
+                              fill="#6bcdfe"></path>
+                            <path
+                              d="m185.83 143.71h-15.453c2.276 0 4.121 1.845 4.121 4.121v24.864c0 2.276-1.845 4.121-4.121 4.121h15.453c2.276 0 4.121-1.845 4.121-4.121v-24.864c-.001-2.276-1.845-4.121-4.121-4.121z"
+                              fill="#6bcdfe"></path>
+                            <path
+                              d="m160.966 244.668h24.864c2.276 0 4.121-1.845 4.121-4.121v-24.864c0-2.276-1.845-4.121-4.121-4.121h-24.864c-2.276 0-4.121 1.845-4.121 4.121v24.864c0 2.276 1.845 4.121 4.121 4.121z"
+                              fill="#8fd8fa"></path>
+                            <path d="m216.971 203.836h15.453v15.453h-15.453z" fill="#8fd8fa"></path>
+                            <g>
+                              <path
+                                d="m257.803 230.133c-4.267 0-7.726-3.459-7.726-7.726v-10.844c0-4.268 3.459-7.726 7.726-7.726s7.726 3.459 7.726 7.726v10.844c0 4.267-3.459 7.726-7.726 7.726z"
+                                fill="#8fd8fa"></path>
+                            </g>
+                            <g>
+                              <path
+                                d="m257.803 252.394h-33.105c-4.267 0-7.726-3.459-7.726-7.726 0-4.268 3.459-7.726 7.726-7.726h33.105c4.267 0 7.726 3.459 7.726 7.726 0 4.268-3.459 7.726-7.726 7.726z"
+                                fill="#8fd8fa"></path>
+                            </g>
+                            <path
+                              d="m185.83 211.563h-15.453c2.276 0 4.121 1.845 4.121 4.121v24.864c0 2.276-1.845 4.121-4.121 4.121h15.453c2.276 0 4.121-1.845 4.121-4.121v-24.864c-.001-2.277-1.845-4.121-4.121-4.121z"
+                              fill="#6bcdfe"></path>
+                          </g>
+                          <g>
+                            <path
+                              d="m446.841 430.616h-264.454c-9.103 0-16.483-7.38-16.483-16.483v-73.088c0-9.103 7.38-16.483 16.483-16.483h264.454c9.103 0 16.483 7.38 16.483 16.483v73.088c0 9.103-7.38 16.483-16.483 16.483z"
+                              fill="#f58a97"></path>
+                            <path
+                              d="m446.841 324.562h-30.905c9.103 0 16.483 7.38 16.483 16.483v73.088c0 9.103-7.38 16.483-16.483 16.483h30.905c9.103 0 16.483-7.38 16.483-16.483v-73.088c0-9.103-7.38-16.483-16.483-16.483z"
+                              fill="#f07281"></path>
+                            <g fill="#fff">
+                              <path
+                                d="m354.5 350.646c-1.311-3.444-4.594-5.697-8.274-5.697-.003 0-.007 0-.01 0-3.645 0-6.969 2.248-8.256 5.678l-18.71 49.127c-1.519 3.987.482 8.451 4.47 9.97 3.991 1.52 8.451-.484 9.97-4.471l2.764-7.258h19.396l2.731 7.236c1.52 4.041 6.049 5.974 9.957 4.5 3.992-1.506 6.008-5.964 4.501-9.957zm-12.159 31.896 3.857-10.128 3.822 10.128z">
+                              </path>
+                              <path
+                                d="m439.197 352.601c-.041-4.241-3.492-7.652-7.724-7.652-.025 0-.051 0-.076 0-4.267.041-7.693 3.534-7.651 7.801l.246 25.478-20.615-29.85c-1.922-2.783-5.429-3.993-8.657-2.986-3.228 1.006-5.427 3.995-5.427 7.376v49.735c0 4.268 3.459 7.726 7.726 7.726s7.726-3.459 7.726-7.726v-24.951l19.545 28.302c2.21 3.195 5.923 4.546 9.456 3.447 3.594-1.122 5.916-4.449 5.916-8.551z">
+                              </path>
+                              <path
+                                d="m305.148 389.55c-3.27-2.741-8.143-2.316-10.885.954-.389.464-.807.895-1.242 1.283-2.227 1.984-5.099 2.99-8.535 2.99-9.477 0-17.188-7.71-17.188-17.188 0-9.477 7.71-17.187 17.188-17.187 3.446 0 6.767 1.013 9.605 2.931 3.536 2.388 8.339 1.459 10.727-2.077 2.389-3.536 1.459-8.339-2.077-10.727-5.402-3.65-11.715-5.578-18.255-5.578-17.998 0-32.64 14.642-32.64 32.64s14.642 32.641 32.64 32.641c7.237 0 13.742-2.387 18.813-6.903.991-.882 1.934-1.855 2.802-2.89 2.743-3.272 2.316-8.146-.953-10.889z">
+                              </path>
+                              <path
+                                d="m221.656 370.733c-5.858-2.161-11.33-4.509-13.275-5.357-.572-.546-.622-1.234-.548-1.749.181-1.258 1.242-2.268 2.914-2.772 6.206-1.865 12.114 2.724 12.334 2.897 3.266 2.702 8.104 2.267 10.836-.984 2.745-3.267 2.323-8.141-.943-10.886-4.509-3.789-15.202-9.277-26.685-5.823-7.444 2.242-12.713 8.133-13.752 15.371-.98 6.829 1.981 13.398 7.729 17.145 2.744 1.789 6.241 3.037 16.042 6.655 2.944 1.087 5.955 3 5.577 5.116-.319 1.787-2.838 4.431-7.23 4.431-4.537 0-8.888-1.813-11.639-4.848-2.865-3.162-7.752-3.402-10.913-.537-3.162 2.865-3.402 7.751-.537 10.913 5.716 6.307 14.132 9.925 23.09 9.925 11.228 0 20.666-7.22 22.442-17.167 1.347-7.545-2.002-17.373-15.442-22.33z">
+                              </path>
+                            </g>
+                          </g>
+                        </g>
+                      </svg></span>
+                    <h3 class="u-text u-text-default u-text-palette-1-base u-text-10">QR Code<br>(Interface Paypal)
+                    </h3>
+                    <p class="u-text u-text-palette-5-dark-2 u-text-11">É idêntico ao Botão Doar, apenas tem uma forma
+                      diferente de chegar à interface.</p>
+                    <img class="u-image u-image-default u-preserve-proportions u-image-1" th:src="@{/images/Cdigo_QR.png}"
+                      alt="" data-image-width="128" data-image-height="128">
+                  </div>
+                </div>
+                <div
+                  class="u-align-center u-container-style u-layout-cell u-radius-10 u-size-40 u-white u-layout-cell-4">
+                  <div
+                    class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-11">
+                    <span class="u-file-icon u-icon u-icon-circle u-palette-2-light-3 u-spacing-18 u-icon-8"><img
+                        th:src="@{/images/icons8-multibanco-48_150.png}" alt=""></span>
+                    <h3 class="u-text u-text-default u-text-palette-1-base u-text-12"> MBWay</h3>
+                    <p class="u-text u-text-palette-5-dark-2 u-text-13">Podes transferir para o meu número. No momento
+                      em que tiver acumulado 10​€, eu próprio faço uma transferência MB.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="u-align-left u-clearfix u-gradient u-section-4" id="sec-41fd">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <div
+        class="u-align-center u-container-style u-expanded-width-xs u-grey-5 u-group u-opacity u-opacity-75 u-group-1">
+        <div
+          class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-container-layout-1">
+          <h1 class="u-text u-text-default u-text-1">Registar contribuição</h1>
+          <p class="u-text u-text-2">O formulário que está apresentado em baixo serve o propósito de manter um registo
+            persistente de todas as contribuições feitas. Depois de teres enviado o dinheiro por um dos métodos
+            descritos na secção anterior, peço que preenchas o formulário. Caso não o faças, terei eu de fazer. (Dá-me
+            trabalho que eu sei onde moras!)</p>
+          <div class="u-form u-form-1">
+            <form action="#" th:action="@{/contribution}" th:object="${payment}" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
+              style="padding: 10px;">
+              <div class="u-form-group u-form-name">
+                <label for="name-426a" class="u-form-control-hidden u-label"></label>
+                <input type="text" placeholder="Nome Por Favor" id="name-426a" th:field="*{name}"
+                  class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              </div>
+              <div class="u-form-email u-form-group">
+                <label for="email-426a" class="u-form-control-hidden u-label"></label>
+                <input type="number" placeholder="E Valor da Contribuição" id="email-426a" th:field="*{amount}"
+                  class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              </div>
+              <div class="u-align-center u-form-group u-form-submit">
+                <!-- <a href="#" class="u-border-none u-btn u-btn-submit u-button-style u-btn-1">Submeter<br>
+                </a> -->
+                <input type="submit" value="Submeter" class="u-border-none u-btn u-btn-submit u-button-style u-btn-1">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="u-align-center u-clearfix u-gradient u-section-5" id="sec-c3f0">
+    <div
+      class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
+      <h1 class="u-text u-text-default u-text-1">Histórico De Contribuições</h1>
+      <div class="u-expanded-width u-table u-table-responsive u-table-1">
+        <table class="u-table-entity u-table-entity-1">
+          <colgroup>
+            <col width="50%">
+            <col width="50%">
+          </colgroup>
+          <thead class="u-palette-4-dark-1 u-table-header u-table-header-1">
+            <tr style="height: 47px;">
+              <th class="u-border-1 u-border-palette-4-base u-table-cell">Nome</th>
+              <th class="u-border-1 u-border-palette-4-base u-table-cell">Data (última transação)</th>
+            </tr>
+          </thead>
+          <tbody class="u-table-body">
+            <tr style="height: 76px;" th:each="contribution : ${contributions}">
+              <td class="u-border-1 u-border-grey-30 u-first-column u-table-cell" th:text="${contribution.name}">Row 1</td>
+              <td class="u-border-1 u-border-grey-30 u-table-cell" th:text="${contribution.getTimestamp().toString().substring(0, 10)}">Date</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-0a24">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <p class="u-small-text u-text u-text-variant u-text-1">Obrigado a todos pelo gesto. Graças a vós consegui
+        finalmente implementar o meu esquema em losango. Muito obrigado, estou eternamente grato.&nbsp;<span
+          class="u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 50 50" x="0px" y="0px"
+            style="width: 1em; height: 1em;">
+            <path style="fill:currentColor;" d="M24.85,10.126c2.018-4.783,6.628-8.125,11.99-8.125c7.223,0,12.425,6.179,13.079,13.543
+	c0,0,0.353,1.828-0.424,5.119c-1.058,4.482-3.545,8.464-6.898,11.503L24.85,48L7.402,32.165c-3.353-3.038-5.84-7.021-6.898-11.503
+	c-0.777-3.291-0.424-5.119-0.424-5.119C0.734,8.179,5.936,2,13.159,2C18.522,2,22.832,5.343,24.85,10.126z"></path>
+          </svg><img></span>
+      </p>
+    </div>
+  </footer>
+  <!-- <section class="u-backlink u-clearfix u-grey-80">
+    <a class="u-link" href="https://nicepage.com/html-templates" target="_blank">
+      <span>Free HTML Templates</span>
+    </a>
+    <p class="u-text">
+      <span>created with</span>
+    </p>
+    <a class="u-link" href="https://nicepage.com/website-builder" target="_blank">
+      <span>Best Website Builder</span>
+    </a>.
+  </section> -->
 </body>
+
 </html>
