@@ -1,13 +1,16 @@
 package com.orlando.vaquinha.web;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 import com.orlando.vaquinha.dto.PaymentDto;
+import com.orlando.vaquinha.dto.UserDto;
 import com.orlando.vaquinha.model.Payment;
 import com.orlando.vaquinha.paypal.ApiRequest;
 import com.orlando.vaquinha.repository.PaymentRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,6 +32,7 @@ public class FrontController {
     public String index(Model model) {
         model.addAttribute("balance", paypalApiRequest.getBalance());
         model.addAttribute("payment", new PaymentDto());
+        model.addAttribute("user", new UserDto());
         model.addAttribute("contributions", paymentRepository.findTop12ByOrderByTimestampDesc());
         return "index";
     }
@@ -46,6 +50,62 @@ public class FrontController {
             paymentRepository.save(contribution);
         }
         return "contribution";
+    }
+
+    @PostMapping("/contribution/list")
+    public String listContributions(@ModelAttribute UserDto user, Model model) {
+        var contributions = this.paymentRepository.findTop12ByName(
+            user.getName(),
+            Sort.by(Sort.Direction.DESC, "timestamp")
+        );
+
+        model.addAttribute("contributions", replaceNameWithMonth(contributions));
+        model.addAttribute("name", user.getName());
+        return "list_contributions";
+    }
+
+    private List<Payment> replaceNameWithMonth(List<Payment> contributions) {
+
+        contributions.forEach(
+            (contribution) -> contribution.setName(
+                getMonthOfTimestamp(contribution.getTimestamp())
+            )
+        );
+
+        return contributions;
+    }
+
+    private String getMonthOfTimestamp(Timestamp timestamp) {
+        var year = " de " + timestamp.toString().substring(0, 4);
+        switch (timestamp.toLocalDateTime().getMonth().getValue()) {
+            case 1:
+                return "Janeiro" + year;
+            case 2:
+                return "Fevereiro" + year;
+            case 3:
+                return "Março" + year;
+            case 4:
+                return "Abril" + year;
+            case 5:
+                return "Maio" + year;
+            case 6:
+                return "Junho" + year;
+            case 7:
+                return "Julho" + year;
+            case 8:
+                return "Agosto" + year;
+            case 9:
+                return "Setembro" + year;
+            case 10:
+                return "Outubro" + year;
+            case 11:
+                return "Novembro" + year;
+            case 12:
+                return "Dezembro" + year;
+        
+            default:
+                return "Desconhecido";
+        }
     }
 
     private Boolean verifyPaymentParams(Model model, PaymentDto payment) {
