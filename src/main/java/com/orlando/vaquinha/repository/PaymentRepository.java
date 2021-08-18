@@ -14,4 +14,5 @@ public interface PaymentRepository extends JpaRepository<Payment, Long>{
     
     List<Payment> findAllByTimestampAfter(Timestamp timestamp);
     List<Payment> findAllByName(String name);
+    List<Payment> findTop12ByOrderByTimestampDesc();
 }
