@@ -1,17 +1,17 @@
 .u-section-1 {
-  background-image: url("../images/vaquinha-landscape-ref-v2.jpg");
+  background-image: url("../images/vaquinha-fullhd-resized.jpg");
   background-position: 50% 50%;
 }
 
 @media (max-width: 991px) {
   .u-section-1 {
-    background-image: url("../images/vaquinha-landscape-ref.jpg");
+    background-image: url("../images/vaquinha-fullhd-resized.jpg");
   }
 }
 
 @media (max-width: 575px) {
   .u-section-1 {
-    background-image: url("../images/vaquinha-phone-ref.jpg");
+    background-image: url("../images/vaquinha-phone-res-v2.jpg");
   }
 }
 
