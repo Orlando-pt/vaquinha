@@ -86,6 +86,14 @@
               class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base"
               href="#sec-your-contributions" style="padding: 10px;">O Teu Histórico</a>
             </li>
+            <li class="u-nav-item">
+              <form id="logoutForm" method="POST" th:action="@{/logout}">
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+              </form>
+              <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base"
+                style="padding: 10px; cursor: pointer;"
+                onclick="document.forms['logoutForm'].submit()">Logout</a>
+            </li>
           </ul>
         </div>
         <div class="u-custom-menu u-nav-container-collapse" wfd-invisible="true">
@@ -110,6 +118,13 @@
                 </li>
                 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#sec-your-contributions"
                   style="padding: 10px;">O Teu Histórico</a>
+                </li>
+                <li class="u-nav-item">
+                  <form id="logoutForm" method="POST" th:action="@{/logout}">
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                  </form>
+                  <a class="u-button-style u-nav-link" style="padding: 10px; cursor: pointer;"
+                    onclick="document.forms['logoutForm'].submit()">Logout</a>
                 </li>
               </ul>
             </div>

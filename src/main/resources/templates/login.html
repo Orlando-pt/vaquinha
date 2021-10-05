@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" style="font-size: 16px;">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="​What do our users say?">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>List Contributions</title>
+    <link rel="stylesheet" th:href="@{/css/nicepage.css}" media="screen">
+    <link rel="stylesheet" th:href="@{/css/index.css}" media="screen">
+    <script class="u-script" type="text/javascript" th:src="@{/js/jquery-1.9.1.min.js}" defer=""></script>
+    <script class="u-script" type="text/javascript" th:src="@{/js/nicepage.js}" defer=""></script>
+    <meta name="generator" content="Nicepage 3.23.2, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+
+
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "../static/images/logo.jpg"
+}</script>
+
+
+    <meta name="theme-color" content="#4b7de1">
+    <meta property="og:title" content="contribution">
+    <meta property="og:type" content="website">
+</head>
+
+<body class="u-body">
+    <header class="u-clearfix u-header u-sticky u-sticky-a8fb u-white u-header" id="sec-fce5">
+        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+            <a th:href="@{/}" class="u-align-left u-image u-image-default u-logo u-image-1" data-image-width="300"
+                data-image-height="300">
+                <img th:src="@{/images/logo.jpg}" class="u-logo-image u-logo-image-1">
+            </a>
+            <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="XL">
+                <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700;"
+                    wfd-invisible="true">
+                    <a class="u-button-style u-custom-border u-custom-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                        href="#">
+                        <svg>
+                            <use xlink:href="#menu-hamburger"></use>
+                        </svg>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs>
+                                <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;">
+                                    <rect y="1" width="16" height="2"></rect>
+                                    <rect y="7" width="16" height="2"></rect>
+                                    <rect y="13" width="16" height="2"></rect>
+                                </symbol>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+                <div class="u-custom-menu u-nav-container" wfd-invisible="true">
+                    <ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
+                        <li class="u-nav-item"><a
+                                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base"
+                                th:href="@{/}" style="padding: 10px;">Home</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="u-custom-menu u-nav-container-collapse" wfd-invisible="true">
+                    <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+                        <div class="u-sidenav-overflow">
+                            <div class="u-menu-close"></div>
+                            <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                                <li class="u-nav-item"><a class="u-button-style u-nav-link" th:href="@{/}"
+                                        style="padding: 10px;">Home</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="u-black u-menu-overlay u-opacity u-opacity-70" wfd-invisible="true"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section style="height: 150vh;" class="u-align-center u-clearfix u-gradient u-section-5" id="sec-contributions">
+        <form class="form-signin" method="POST" th:action="@{/login}">
+            <h2 class="form-heading">Log in</h2>
+
+            <div class="form-group">
+                <span th:text="${message}"></span>
+                <input name="username" type="text" class="form-control" placeholder="Username" autofocus="true" />
+
+                <input name="password" type="password" class="form-control" placeholder="Password" />
+                <span class="has-error" th:text="${error}"></span>
+
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
+                <h4 class="text-center"><a href="/registration">Create an account</a></h4>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
